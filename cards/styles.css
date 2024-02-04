@@ -1,0 +1,32 @@
+.cards-wrapper {
+    background: white;
+    padding: 15px;
+    width: 200px;
+    border: 1px solid;
+    border-radius: 13px;
+    margin: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-details {
+    background: skyblue;
+    color: white;
+}
+
+img{
+    align-self: center;
+    width: 100%;
+}
+
+.btns{
+    display: flex;
+
+
+}
+.card-contact-seller {
+
+    background: white;
+    color: skyblue;
+}
