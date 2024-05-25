@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Freeman&family=Manrope:wght@200..800&family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
+
+:root {
+    --main-background: #F6F7F8;
+    --color-white: #FFFFFF;
+    --color-styles: #072635;
+    --color-chart: #F4F0FE;
+    --color-chart-1a: #7E6CAB;
+    --color-chart-1b: #8C6FE6;
+    --color-chart-2b: #C26EB4;
+    --color-chart-2a: #E66FD2;
+    --color-button: #01F0D0;
+    --color-info-dark: #707070;
+    --color--info-light: #EDEDED;
+    --color-temprature: #FFE6E9;
+    --color-lungs: #E0F3FA;
+    --color-heart: #FFE6F1;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    border: 0;
+    box-sizing: border-box;
+    outline: none;
+    appearance: none;
+}
+
+body {
+    background: var(--main-background);
+    width: 100vw;
+    height: 100vh;
+    font-family: "Mukta", sans-serif;
+    font-size: 0.88rem;
+    user-select: none;
+    overflow-x: hidden;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 72px 1fr 1fr 1fr;
+    gap: 23px;
+    height: 100%;
+    grid-template-areas:
+        "head head head head"
+        "side main main main"
+        "side main main main"
+        "side main main main"
+    ;
+}
+
+header {
+    background-color: #072635;
+    grid-area: head;
+    position: relative;
+    top: 0;
+}
+
+aside {
+    background: #01F0D0;
+    grid-area: side;
+    position: relative;
+}
+
+main {
+    grid-area: main;
+    background: #E66FD2;
+}
