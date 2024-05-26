@@ -41,40 +41,321 @@ body {
     background: var(--main-background);
     width: 100vw;
     height: 100vh;
-    font-family: "Mukta", sans-serif;
-    font-size: 0.88rem;
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
     user-select: none;
     overflow-x: hidden;
 }
 
 .container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 72px 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 72px 1fr;
     gap: 23px;
     height: 100%;
     grid-template-areas:
-        "head head head head"
-        "side main main main"
-        "side main main main"
-        "side main main main"
+        "head" "main"
     ;
 }
 
+/* ==== HEADER STARTDS HERE ===== */
+
 header {
-    background-color: #072635;
+    background-color: var(--color-white);
     grid-area: head;
     position: relative;
     top: 0;
+    border-radius: 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    margin: 9px;
 }
 
-aside {
-    background: #01F0D0;
-    grid-area: side;
-    position: relative;
+header .logo {
+    width: 210px;
+    height: 48px;
+    padding: 4px;
 }
+
+/*  ==== navigation ==== */
+header nav ul {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+
+
+}
+
+nav ul li {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    padding: 7px;
+    width: 121px;
+    height: 41px;
+    gap: 8px;
+    justify-content: center;
+}
+
+nav ul .active {
+    background: var(--color-button);
+    border-radius: 2rem;
+
+
+}
+
+/*  ==== END NAVIGATION ===== */
+
+/* ======  ACCOUNTS ====== */
+.account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+.profile-text {
+    padding: 0 8px;
+}
+
+.profile-text .name {
+    font-weight: bold;
+    color: var(--color-styles);
+
+}
+
+
+.profile-text .occupation {
+    font-weight: 100;
+    color: var(--color-info-dark);
+}
+
+.settings {
+    padding: 0 18px 0 0;
+}
+
+/* ==== END PROFILE ==== */
+
+/* ==== END HEADER ==== */
+
+/* === START MAIN === */
 
 main {
     grid-area: main;
-    background: #E66FD2;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 23px;
+    height: 100%;
+    grid-template-areas:
+        "left center center right"
+
+    ;
 }
+
+/*  ===== start left side ==== */
+.left {
+    grid-area: left;
+    background: var(--color-white);
+    margin: 0 18px;
+    padding: 20px;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.left .header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 8px;
+}
+
+.left .header .title {
+    font-size: 24px;
+}
+
+.left .contents {
+    display: flex;
+    flex-direction: column;
+    height: 75vh;
+    overflow-y: scroll;
+    padding-right: 8px;
+
+}
+
+.left .contents::-webkit-scrollbar {
+    width: 4px;
+}
+
+.left .contents::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.left .contents::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+.left .contents::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.left .contents .profile {
+    margin: 16px 0;
+    position: relative;
+    ;
+
+}
+
+.left .contents .profile>div {
+    display: flex;
+
+}
+
+
+
+/* ==== end left side ==== */
+/*  ===== start right side ==== */
+
+.right {
+    background: #f05901;
+    grid-area: right;
+}
+
+/* ==== end right side ==== */
+
+
+/* ==== start center ==== */
+
+.center {
+    background: #b8e66f;
+    grid-area: center;
+    height: 100%;
+    padding: 20px;
+    border-radius: 1rem;
+
+}
+.diagnosis-history-container{
+
+    background-color: #01F0D0;
+    margin-bottom: 32px;
+}
+
+.diagnosis-history-container .header {
+    display: flex;
+    justify-content: start;
+    padding-bottom: 8px;
+
+}
+
+.diagnosis-history-container .header .title {
+    font-size: 24px;
+
+}
+
+
+/*  ===== ====== Start CHart Area ===== */
+.chart-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1f);
+    grid-template-rows: repeat(2, 1fr);
+    max-height: 230px;
+    max-width: 720px;
+    padding: 16px 16px;
+    margin: 20px 0;
+    border-radius: 1rem;
+    grid-template-areas:
+        "chart chart stat"
+        "chart chart stat";
+    background: var(--color-chart);
+
+}
+
+.chart-container .chart-area {
+    grid-area: chart;
+    /* background: orange; */
+}
+
+.chart-container .chart-area .chart-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+
+.chart-container .chart-area .chart-header .months {
+    font-weight: 300;
+    font-size: 14px;
+    padding-right: 8px;
+}
+
+canvas#myChart {
+    width: 100% !important;
+    padding: 14px 0 20px 0  !important;
+}
+
+.chart-container .status-area {
+    grid-area: stat;
+    display: flex;
+    flex-direction: column;
+    /* justify-content:s; */
+}
+
+.chart-status{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    padding-bottom: 33px;
+}
+
+.status-area .chart-status .ellips {
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.ellips.systolic {
+    background: var(--color-chart-2a);
+
+}
+
+.ellips.diastolic {
+    background: var(--color-chart-1a);
+
+}
+
+.stats-value{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.stat-indicator{
+    font-weight: 100;
+    font-size: 14px;
+}
+
+/*  ==== END CHART AREAs === */
+
+/* ====== start diag cards ===== */
+.stats-cards{
+
+    display: flex;
+    justify-content: space-between;
+    gap: 21px;
+    /* margin: ; */
+}
+
+
+
+/* ==== end center ==== */
