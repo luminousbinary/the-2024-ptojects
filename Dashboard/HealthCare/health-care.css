@@ -240,24 +240,25 @@ main {
     background: #b8e66f;
     grid-area: center;
     height: 100%;
-    padding: 20px;
-    border-radius: 1rem;
+    /* padding: 20px; */
 
 }
-.diagnosis-history-container{
 
-    background-color: #01F0D0;
+.diagnosis {
+    padding: 20px;
+    border-radius: 1rem;
+    background-color: var(--color-white);
     margin-bottom: 32px;
 }
 
-.diagnosis-history-container .header {
+.diagnosis .header {
     display: flex;
     justify-content: start;
     padding-bottom: 8px;
 
 }
 
-.diagnosis-history-container .header .title {
+.diagnosis .header .title {
     font-size: 24px;
 
 }
@@ -300,7 +301,7 @@ main {
 
 canvas#myChart {
     width: 100% !important;
-    padding: 14px 0 20px 0  !important;
+    padding: 14px 0 20px 0 !important;
 }
 
 .chart-container .status-area {
@@ -310,7 +311,7 @@ canvas#myChart {
     /* justify-content:s; */
 }
 
-.chart-status{
+.chart-status {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -335,12 +336,12 @@ canvas#myChart {
 
 }
 
-.stats-value{
+.stats-value {
     font-size: 22px;
     font-weight: bold;
 }
 
-.stat-indicator{
+.stat-indicator {
     font-weight: 100;
     font-size: 14px;
 }
@@ -348,13 +349,52 @@ canvas#myChart {
 /*  ==== END CHART AREAs === */
 
 /* ====== start diag cards ===== */
-.stats-cards{
+.stats-cards {
 
     display: flex;
     justify-content: space-between;
     gap: 21px;
-    /* margin: ; */
+
 }
+
+.stats-cards .card {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border-radius: 1rem;
+    width: 100%;
+}
+
+.stats-cards .card.temp {
+  background: var(--color-temprature);
+}.stats-cards .card.heart {
+  background: var(--color-heart);
+}.stats-cards .card.lung {
+  background: var(--color-lungs);
+}
+
+.stats-cards .card img {
+    width: 96px;
+    margin-bottom: 16px;
+}
+
+.stats-cards .card .text {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.stats-cards .card .rates {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.stats-cards .card .rate-status {
+    font-weight: 100;
+    margin-top: 16px;
+}
+
+/* ====  end card here === */
+
 
 
 
