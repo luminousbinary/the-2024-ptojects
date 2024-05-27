@@ -414,6 +414,7 @@ font-weight: 500;
 .table-head {
     background-color: #afaaaa;
     border-radius: 1rem;
+    width: 100%;
 
 }
 
@@ -443,6 +444,9 @@ tbody tr {
 
 }
 
+.center-col{
+    width: 50%;
+}
 
 /*  ======  tables ends here ===== */
 /* ==== end center ==== */
