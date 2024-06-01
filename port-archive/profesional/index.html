@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>cta.CSS Template</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Montserrat", sans-serif;
+      }
+      .cta-row-padding img {
+        margin-bottom: 12px;
+      }
+      /* Set the width of the sidebar to 120px */
+      .cta-sidebar {
+        width: 120px;
+        background: #222;
+      }
+      /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+      #main {
+        margin-left: 120px;
+      }
+      /* Remove margins from "page content" on small screens */
+      @media only screen and (max-width: 600px) {
+        #main {
+          margin-left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body class="cta-black">
+    <!-- Icon Bar (Sidebar - hidden on small screens) -->
+    <nav class="cta-sidebar cta-bar-block cta-small cta-hide-small cta-center">
+      <!-- Avatar image in top left corner -->
+      <img
+        src="./public/image/logo.png"
+        style="width: 100%; max-width: 50px; max-height: 50px"
+      />
+      <a href="#" class="cta-bar-item cta-button cta-padding-large cta-black">
+        <i class="fa fa-home cta-xxlarge"></i>
+        <p>HOME</p>
+      </a>
+      <a
+        href="#about"
+        class="cta-bar-item cta-button cta-padding-large cta-hover-black"
+      >
+        <i class="fa fa-user cta-xxlarge"></i>
+        <p>ABOUT</p>
+      </a>
+      <a
+        href="#photos"
+        class="cta-bar-item cta-button cta-padding-large cta-hover-black"
+      >
+        <i class="fa fa-eye cta-xxlarge"></i>
+        <p>PHOTOS</p>
+      </a>
+      <a
+        href="#contact"
+        class="cta-bar-item cta-button cta-padding-large cta-hover-black"
+      >
+        <i class="fa fa-envelope cta-xxlarge"></i>
+        <p>CONTACT</p>
+      </a>
+    </nav>
+
+    <!-- Navbar on small screens (Hidden on medium and large screens) -->
+    <div class="cta-top cta-hide-large cta-hide-medium" id="myNavbar">
+      <div
+        class="cta-bar cta-black cta-opacity cta-hover-opacity-off cta-center cta-small"
+      >
+        <a
+          href="#"
+          class="cta-bar-item cta-button"
+          style="width: 25% !important"
+          >HOME</a
+        >
+        <a
+          href="#about"
+          class="cta-bar-item cta-button"
+          style="width: 25% !important"
+          >ABOUT</a
+        >
+        <a
+          href="#photos"
+          class="cta-bar-item cta-button"
+          style="width: 25% !important"
+          >PHOTOS</a
+        >
+        <a
+          href="#contact"
+          class="cta-bar-item cta-button"
+          style="width: 25% !important"
+          >CONTACT</a
+        >
+      </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="cta-padding-large" id="main">
+      <!-- Header/Home -->
+      <header
+        class="cta-container cta-padding-32 cta-center cta-black"
+        id="home"
+      >
+        <h1 class="cta-jumbo">
+          <span class="cta-hide-small">I'm</span> Caleb Tolase.
+        </h1>
+        <p>Photographer and Web Designer.</p>
+        <img
+          src="../photography/public/ctaimages/caleb.JPG"
+          alt="boy"
+          class="cta-image"
+          width="992"
+          height="1108"
+        />
+      </header>
+
+      <!-- About Section -->
+      <div
+        class="cta-content cta-justify cta-text-grey cta-padding-64"
+        id="about"
+      >
+        <h2 class="cta-text-light-grey">My Name</h2>
+        <hr style="width: 200px" class="cta-opacity" />
+        <p>
+          Some text about me. Some text about me. I am lorem ipsum consectetur
+          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+          fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+          sunt in culpa qui officia deserunt mollit anim id est laborum
+          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <h3 class="cta-padding-16 cta-text-light-grey">My Skills</h3>
+        <p class="cta-wide">Photography</p>
+        <div class="cta-white">
+          <div class="cta-dark-grey" style="height: 28px; width: 95%"></div>
+        </div>
+        <p class="cta-wide">Web Design</p>
+        <div class="cta-white">
+          <div class="cta-dark-grey" style="height: 28px; width: 85%"></div>
+        </div>
+        <p class="cta-wide">Photoshop</p>
+        <div class="cta-white">
+          <div class="cta-dark-grey" style="height: 28px; width: 80%"></div>
+        </div>
+        <br />
+
+        <div
+          class="cta-row cta-center cta-padding-16 cta-section cta-light-grey"
+        >
+          <div class="cta-quarter cta-section">
+            <span class="cta-xlarge">11+</span><br />
+            Partners
+          </div>
+          <div class="cta-quarter cta-section">
+            <span class="cta-xlarge">55+</span><br />
+            Projects Done
+          </div>
+          <div class="cta-quarter cta-section">
+            <span class="cta-xlarge">89+</span><br />
+            Happy Clients
+          </div>
+          <div class="cta-quarter cta-section">
+            <span class="cta-xlarge">150+</span><br />
+            Meetings
+          </div>
+        </div>
+
+        <button
+          id="resume"
+          class="cta-button cta-light-grey cta-padding-large cta-section"
+        >
+          <i class="fa fa-download"></i> Download Resume
+        </button>
+
+        <!-- Grid for pricing tables -->
+        <h3 class="cta-padding-16 cta-text-light-grey">My Price</h3>
+        <div class="cta-row-padding" style="margin: 0 -16px">
+          <div class="cta-half cta-margin-bottom">
+            <ul
+              class="cta-ul cta-white cta-center cta-opacity cta-hover-opacity-off"
+            >
+              <li class="cta-dark-grey cta-xlarge cta-padding-32">Basic</li>
+              <li class="cta-padding-16">Web Design</li>
+              <li class="cta-padding-16">Photography</li>
+              <li class="cta-padding-16">5GB Storage</li>
+              <li class="cta-padding-16">Mail Support</li>
+              <li class="cta-padding-16">
+                <h2>$ 100</h2>
+                <span class="cta-opacity">per project</span>
+              </li>
+              <li class="cta-light-grey cta-padding-24">
+                <button
+                  class="cta-button cta-white cta-padding-large cta-hover-black"
+                >
+                  Sign Up
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="cta-half">
+            <ul
+              class="cta-ul cta-white cta-center cta-opacity cta-hover-opacity-off"
+            >
+              <li class="cta-dark-grey cta-xlarge cta-padding-32">Pro</li>
+              <li class="cta-padding-16">Web Design</li>
+              <li class="cta-padding-16">Photography</li>
+              <li class="cta-padding-16">50GB Storage</li>
+              <li class="cta-padding-16">Endless Support</li>
+              <li class="cta-padding-16">
+                <h2>$ 250</h2>
+                <span class="cta-opacity">per project</span>
+              </li>
+              <li class="cta-light-grey cta-padding-24">
+                <button
+                  class="cta-button cta-white cta-padding-large cta-hover-black"
+                >
+                  Sign Up
+                </button>
+              </li>
+            </ul>
+          </div>
+          <!-- End Grid/Pricing tables -->
+        </div>
+
+        <!-- Testimonials -->
+        <h3 class="cta-padding-24 cta-text-light-grey">My Reputation</h3>
+        <img
+          src="../photography/public/ctaimages/caleb-bunny.JPG"
+          alt="Avatar"
+          class="cta-left cta-circle cta-margin-right"
+          style="overflow: hidden; max-height: 80px; max-width: 80px"
+        />
+        <p>
+          <span class="cta-large cta-margin-right">Chris Fox.</span> CEO at
+          Mighty Schools.
+        </p>
+        <p>Caleb Tolase saved us from a web disaster.</p>
+        <br />
+
+        <img
+          src="../photography/public/ctaimages/caleb-black.jpg"
+          alt="Avatar"
+          class="cta-left cta-circle cta-margin-right"
+          style="overflow: hidden; max-height: 80px; max-width: 80px"
+        />
+        <p>
+          <span class="cta-large cta-margin-right">Rebecca Flex.</span> CEO at
+          Company.
+        </p>
+        <p>No one is better than Caleb Tolase.</p>
+        <!-- End About Section -->
+      </div>
+
+      <!-- Portfolio Section -->
+      <div class="cta-padding-64 cta-content" id="photos">
+        <h2 class="cta-text-light-grey">My Photos</h2>
+        <hr style="width: 200px" class="cta-opacity" />
+
+        <!-- Grid for photos -->
+        <div class="cta-row-padding" style="margin: 0 -16px">
+          <div class="cta-half">
+            <img src="/ctaimages/wedding.jpg" style="width: 100%" />
+            <img src="/ctaimages/rocks.jpg" style="width: 100%" />
+            <img src="/ctaimages/sailboat.jpg" style="width: 100%" />
+          </div>
+
+          <div class="cta-half">
+            <img src="/ctaimages/underwater.jpg" style="width: 100%" />
+            <img src="/ctaimages/chef.jpg" style="width: 100%" />
+            <img src="/ctaimages/wedding.jpg" style="width: 100%" />
+            <img src="/ctaimages/p6.jpg" style="width: 100%" />
+          </div>
+          <!-- End photo grid -->
+        </div>
+        <!-- End Portfolio Section -->
+      </div>
+
+      <!-- Contact Section -->
+      <div class="cta-padding-64 cta-content cta-text-grey" id="contact">
+        <h2 class="cta-text-light-grey">Contact Me</h2>
+        <hr style="width: 200px" class="cta-opacity" />
+
+        <div class="cta-section">
+          <p>
+            <i
+              class="fa fa-map-marker fa-fw cta-text-white cta-xxlarge cta-margin-right"
+            ></i>
+            Chicago, US
+          </p>
+          <p>
+            <i
+              class="fa fa-phone fa-fw cta-text-white cta-xxlarge cta-margin-right"
+            ></i>
+            Phone: +00 151515
+          </p>
+          <p>
+            <i
+              class="fa fa-envelope fa-fw cta-text-white cta-xxlarge cta-margin-right"
+            >
+            </i>
+            Email: mail@mail.com
+          </p>
+        </div>
+        <br />
+        <p>Let's get in touch. Send me a message:</p>
+
+        <form action="/action_page.php" target="_blank">
+          <p>
+            <input
+              class="cta-input cta-padding-16"
+              type="text"
+              placeholder="Name"
+              required
+              name="Name"
+            />
+          </p>
+          <p>
+            <input
+              class="cta-input cta-padding-16"
+              type="text"
+              placeholder="Email"
+              required
+              name="Email"
+            />
+          </p>
+          <p>
+            <input
+              class="cta-input cta-padding-16"
+              type="text"
+              placeholder="Subject"
+              required
+              name="Subject"
+            />
+          </p>
+          <p>
+            <input
+              class="cta-input cta-padding-16"
+              type="text"
+              placeholder="Message"
+              required
+              name="Message"
+            />
+          </p>
+          <p>
+            <button
+              class="cta-button cta-light-grey cta-padding-large"
+              type="submit"
+            >
+              <i class="fa fa-paper-plane"></i> SEND MESSAGE
+            </button>
+          </p>
+        </form>
+        <!-- End Contact Section -->
+      </div>
+
+      <!-- Footer -->
+      <footer class="cta-content cta-padding-64 cta-text-grey cta-xlarge">
+        <i class="fa fa-facebook-official cta-hover-opacity"></i>
+        <i class="fa fa-instagram cta-hover-opacity"></i>
+        <i class="fa fa-snapchat cta-hover-opacity"></i>
+        <i class="fa fa-pinterest-p cta-hover-opacity"></i>
+        <i class="fa fa-twitter cta-hover-opacity"></i>
+        <i class="fa fa-linkedin cta-hover-opacity"></i>
+        <p class="cta-medium">
+          Powered by
+          <a
+            href="https://www.ctaschools.com/ctacss/default.asp"
+            target="_blank"
+            class="cta-hover-text-green"
+            >cta.css</a
+          >
+        </p>
+        <!-- End footer -->
+      </footer>
+
+      <!-- END PAGE CONTENT -->
+    </div>
+  </body>
+</html>
